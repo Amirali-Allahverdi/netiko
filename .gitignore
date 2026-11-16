@@ -47,3 +47,6 @@ pnpm-debug.log*
 
 # Secrets
 *.pem
+# Git backups
+/frontend-git-backup/
+/backend-git-backup/
