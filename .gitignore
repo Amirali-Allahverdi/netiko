@@ -1,0 +1,49 @@
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+venv/
+.venv/
+
+# Build outputs
+.next/
+out/
+build/
+dist/
+coverage/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Database
+db.sqlite3
+*.sqlite3
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Deployment
+.vercel/
+
+# Secrets
+*.pem
