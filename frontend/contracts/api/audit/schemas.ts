@@ -7,7 +7,7 @@ import {
   UserIdSchema,
   paginationQuerySchema,
   paginatedResponseSchema,
-} from "../../common/schemas.js"
+} from "../../common/schemas"
 
 export const AuditEventQuerySchema = z
   .object({

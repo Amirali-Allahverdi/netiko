@@ -1,8 +1,8 @@
-export * from './common/primitives.js';
-export * from './common/enums.js';
-export * from './common/pagination.dto.js';
-export * from './common/api-error.dto.js';
-export * from './common/schemas.js';
+export * from "./common/primitives"
+export * from "./common/enums"
+export * from "./common/pagination.dto"
+export * from "./common/api-error.dto"
+export * from "./common/schemas"
 
-export * from './api/index.js';
-export * from './domain/entities.js';
+export * from "./api/index"
+export * from "./domain/entities"

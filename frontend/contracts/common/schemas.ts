@@ -7,8 +7,8 @@ import {
   TASK_STATUSES,
   TEAM_ROLES,
   WORKSPACE_ROLES,
-} from "./enums.js"
-import { JsonValue } from "./primitives.js"
+} from "./enums"
+import { JsonValue } from "./primitives"
 
 export const UUIDSchema = z.string().uuid()
 export const UserIdSchema = z.number().int().nonnegative()

@@ -1,42 +1,42 @@
-export * from './auth/requests.dto.js';
-export * from './auth/responses.dto.js';
-export * from './auth/schemas.js';
+export * from "./auth/requests.dto"
+export * from "./auth/responses.dto"
+export * from "./auth/schemas"
 
-export * from './accounts/requests.dto.js';
-export * from './accounts/responses.dto.js';
-export * from './accounts/schemas.js';
+export * from "./accounts/requests.dto"
+export * from "./accounts/responses.dto"
+export * from "./accounts/schemas"
 
-export * from './workspaces/requests.dto.js';
-export * from './workspaces/responses.dto.js';
-export * from './workspaces/schemas.js';
+export * from "./workspaces/requests.dto"
+export * from "./workspaces/responses.dto"
+export * from "./workspaces/schemas"
 
-export * from './teams/requests.dto.js';
-export * from './teams/responses.dto.js';
-export * from './teams/schemas.js';
+export * from "./teams/requests.dto"
+export * from "./teams/responses.dto"
+export * from "./teams/schemas"
 
-export * from './projects/requests.dto.js';
-export * from './projects/responses.dto.js';
-export * from './projects/schemas.js';
+export * from "./projects/requests.dto"
+export * from "./projects/responses.dto"
+export * from "./projects/schemas"
 
-export * from './labels/requests.dto.js';
-export * from './labels/responses.dto.js';
-export * from './labels/schemas.js';
+export * from "./labels/requests.dto"
+export * from "./labels/responses.dto"
+export * from "./labels/schemas"
 
-export * from './tasks/requests.dto.js';
-export * from './tasks/responses.dto.js';
-export * from './tasks/schemas.js';
+export * from "./tasks/requests.dto"
+export * from "./tasks/responses.dto"
+export * from "./tasks/schemas"
 
-export * from './assignment-rules/requests.dto.js';
-export * from './assignment-rules/responses.dto.js';
-export * from './assignment-rules/schemas.js';
+export * from "./assignment-rules/requests.dto"
+export * from "./assignment-rules/responses.dto"
+export * from "./assignment-rules/schemas"
 
-export * from './audit/requests.dto.js';
-export * from './audit/responses.dto.js';
-export * from './audit/schemas.js';
+export * from "./audit/requests.dto"
+export * from "./audit/responses.dto"
+export * from "./audit/schemas"
 
-export * from './dashboard/requests.dto.js';
-export * from './dashboard/responses.dto.js';
-export * from './dashboard/schemas.js';
-export * from './routes.js';
-export * from './paginated.dto.js';
-export * from './paginated.dto.js';
+export * from "./dashboard/requests.dto"
+export * from "./dashboard/responses.dto"
+export * from "./dashboard/schemas"
+export * from "./routes"
+export * from "./paginated.dto"
+export * from "./paginated.dto"

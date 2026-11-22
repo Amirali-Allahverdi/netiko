@@ -1,13 +1,15 @@
-import { z } from 'zod';
-import { TASK_PRIORITIES } from '../../common/enums.js';
-import { UUIDSchema, UserIdSchema } from '../../common/schemas.js';
+import { z } from "zod"
+import { TASK_PRIORITIES } from "../../common/enums"
+import { UUIDSchema, UserIdSchema } from "../../common/schemas"
 
-export const DashboardQuerySchema = z.object({ workspace: UUIDSchema.optional() });
+export const DashboardQuerySchema = z.object({
+  workspace: UUIDSchema.optional(),
+})
 export const DashboardAssigneeCountSchema = z.object({
   assignee_id: UserIdSchema,
   username: z.string(),
   count: z.number().int().nonnegative(),
-});
+})
 export const DashboardResponseSchema = z.object({
   total_workspaces: z.number().int().nonnegative(),
   total_projects: z.number().int().nonnegative(),
@@ -18,6 +20,9 @@ export const DashboardResponseSchema = z.object({
   completed: z.number().int().nonnegative(),
   cancelled: z.number().int().nonnegative(),
   overdue: z.number().int().nonnegative(),
-  tasks_by_priority: z.record(z.enum(TASK_PRIORITIES), z.number().int().nonnegative()),
+  tasks_by_priority: z.record(
+    z.enum(TASK_PRIORITIES),
+    z.number().int().nonnegative()
+  ),
   tasks_by_assignee: z.array(DashboardAssigneeCountSchema),
-});
+})

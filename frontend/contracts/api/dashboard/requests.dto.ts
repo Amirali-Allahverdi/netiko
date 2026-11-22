@@ -1,6 +1,6 @@
-import type { UUID } from '../../common/primitives.js';
+import type { UUID } from "../../common/primitives"
 
 export interface DashboardQueryDto {
   /** Optional UUID scope; absent means all workspaces visible to the caller. */
-  workspace?: UUID;
+  workspace?: UUID
 }

@@ -1,4 +1,4 @@
-import { z } from 'zod';
+import { z } from "zod"
 import {
   ISODateSchema,
   ISODateTimeSchema,
@@ -9,8 +9,8 @@ import {
   BooleanQuerySchema,
   paginationQuerySchema,
   paginatedResponseSchema,
-} from '../../common/schemas.js';
-import { LabelResponseSchema } from '../labels/schemas.js';
+} from "../../common/schemas"
+import { LabelResponseSchema } from "../labels/schemas"
 
 export const CreateTaskRequestSchema = z.object({
   project: UUIDSchema,
@@ -21,27 +21,42 @@ export const CreateTaskRequestSchema = z.object({
   assignee: UserIdSchema.nullable().optional(),
   label_ids: z.array(UUIDSchema).optional(),
   due_date: ISODateSchema.nullable().optional(),
-});
-export const UpdateTaskRequestSchema = CreateTaskRequestSchema;
-export const PatchTaskRequestSchema = CreateTaskRequestSchema.partial();
-export const SetTaskStatusRequestSchema = z.object({ status: TaskStatusSchema });
-export const AssignTaskRequestSchema = z.object({ assignee: UserIdSchema.nullable() });
+})
+export const UpdateTaskRequestSchema = CreateTaskRequestSchema
+export const PatchTaskRequestSchema = CreateTaskRequestSchema.partial()
+export const SetTaskStatusRequestSchema = z.object({ status: TaskStatusSchema })
+export const AssignTaskRequestSchema = z.object({
+  assignee: UserIdSchema.nullable(),
+})
 
-export const TaskQuerySchema = z.object({
-  assignee: z.coerce.number().int().nonnegative().optional(),
-  status: TaskStatusSchema.optional(),
-  priority: TaskPrioritySchema.optional(),
-  project: UUIDSchema.optional(),
-  team: UUIDSchema.optional(),
-  label: UUIDSchema.optional(),
-  creator: z.coerce.number().int().nonnegative().optional(),
-  due_date: ISODateSchema.optional(),
-  due_before: ISODateSchema.optional(),
-  due_after: ISODateSchema.optional(),
-  unassigned: BooleanQuerySchema.optional(),
-  search: z.string().optional(),
-  ordering: z.enum(['created_at', '-created_at', 'updated_at', '-updated_at', 'due_date', '-due_date', 'priority', '-priority']).optional(),
-}).merge(paginationQuerySchema);
+export const TaskQuerySchema = z
+  .object({
+    assignee: z.coerce.number().int().nonnegative().optional(),
+    status: TaskStatusSchema.optional(),
+    priority: TaskPrioritySchema.optional(),
+    project: UUIDSchema.optional(),
+    team: UUIDSchema.optional(),
+    label: UUIDSchema.optional(),
+    creator: z.coerce.number().int().nonnegative().optional(),
+    due_date: ISODateSchema.optional(),
+    due_before: ISODateSchema.optional(),
+    due_after: ISODateSchema.optional(),
+    unassigned: BooleanQuerySchema.optional(),
+    search: z.string().optional(),
+    ordering: z
+      .enum([
+        "created_at",
+        "-created_at",
+        "updated_at",
+        "-updated_at",
+        "due_date",
+        "-due_date",
+        "priority",
+        "-priority",
+      ])
+      .optional(),
+  })
+  .merge(paginationQuerySchema)
 
 export const TaskListItemResponseSchema = z.object({
   id: UUIDSchema,
@@ -55,7 +70,7 @@ export const TaskListItemResponseSchema = z.object({
   label_names: z.array(z.string()),
   due_date: ISODateSchema.nullable(),
   created_at: ISODateTimeSchema,
-});
+})
 
 export const TaskDetailResponseSchema = z.object({
   id: UUIDSchema,
@@ -71,6 +86,8 @@ export const TaskDetailResponseSchema = z.object({
   due_date: ISODateSchema.nullable(),
   created_at: ISODateTimeSchema,
   updated_at: ISODateTimeSchema,
-});
+})
 
-export const PaginatedTaskListResponseSchema = paginatedResponseSchema(TaskListItemResponseSchema);
+export const PaginatedTaskListResponseSchema = paginatedResponseSchema(
+  TaskListItemResponseSchema
+)
