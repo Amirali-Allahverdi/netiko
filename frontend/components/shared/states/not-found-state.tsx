@@ -1,4 +1,4 @@
-import { FileQuestion } from "lucide-react"
+import { FileQuestionMarkIcon } from "@solar-icons/react/bold/file-question-mark"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
@@ -26,7 +26,7 @@ export function NotFoundState({
       )}
     >
       <div className="flex size-14 items-center justify-center rounded-full bg-muted text-muted-foreground">
-        <FileQuestion aria-hidden="true" className="size-7" />
+        <FileQuestionMarkIcon aria-hidden="true" size={7} />
       </div>
       <h1 className="text-xl font-semibold">{title}</h1>
       <p className="max-w-md text-sm leading-6 text-muted-foreground">
